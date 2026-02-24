@@ -132,6 +132,41 @@
             font-size: 24px; /* 28 × 0.85 */
         }
 
+
+        /* ===== Success Card ===== */
+
+        .success-card {
+            align-items: center;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 185px;
+            height: 185px;
+            background-color: #00E000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .success-icon img {
+            width: 90px;
+            height: 90px;
+        }
+
+        .success-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 25px;
+            border: 1.5px solid #E30000;
+            border-radius: 22px;
+            color: #E30000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
         /* ===== Form ===== */
         .register-card form {
             display: flex;
@@ -168,21 +203,25 @@
         }
 
         .form-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
         }
 
         .login-link {
-        font-size: 14px;
-        margin: 0;
+            font-size: 14px;
+            margin: 0;
         }
 
         .login-link a {
-        color: #E30000;
-        text-decoration: none;
-        font-weight: 500;
+            color: #E30000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-link a:hover {
+            color: #FF0000;
         }
 
 /* ================= FOOTER ================= */

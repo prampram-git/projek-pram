@@ -1,21 +1,36 @@
 @extends('layouts.auth')
 
+@section('title', 'Register')
+
 @section('content')
-<div class="card login-card">
-    <h2>Login</h2>
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+<div class="register-section">
+    <div class="register-banner">
+        <img src="{{ asset('images/banner.png') }}" alt="Banner">
+        
+        <div class="register-card">
+            <h2>Login</h2>
 
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Kata Sandi" required>
+            <form method="POST" action="{{ route('login') }}">
+            @csrf
 
-        <button type="submit">Login</button>
-    </form>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Kata Sandi" required>
 
-    <p class="switch">
-        Belum punya akun?
-        <a href="{{ route('register') }}">Register</a>
-    </p>
+            <div class="form-bottom">
+                <p class="login-link">
+                    Belum punya akun?
+                    <a href="{{ route('register') }}">Register</a>
+                </p>
+
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        
+        </div>
+    </div>
 </div>
+
+
+
 @endsection
