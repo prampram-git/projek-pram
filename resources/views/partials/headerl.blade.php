@@ -10,7 +10,7 @@
         </form>
 
         <div class="nav-menu">
-            <a href="{{ route('home') }}">Home</a>
+            <a href="{{ route('homel') }}">Home</a>
             <a href="#">Kategori</a>
 
             <a href="#" class="icon-btn">
