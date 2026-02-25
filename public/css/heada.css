@@ -313,7 +313,7 @@
         .register-section {
             display: flex;
             justify-content: center;
-            padding-top: 90px; /* supaya tidak ketutup header fixed */
+            padding-top: 100px; /* supaya tidak ketutup header fixed */
         }
 
         .register-banner {
@@ -444,4 +444,100 @@
 
         .login-link a:hover {
             color: #FF0000;
+        }
+
+        /* ================= ADMIN EDIT PRODUK ================= */
+
+        .edit-layout {
+            align-items: start;
+        }
+
+        .edit-card {
+            align-items: flex-start;
+        }
+
+        .edit-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .stok-text {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .edit-actions-row {
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 16px;
+        }
+
+        .edit-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-edit,
+        .btn-delete,
+        .btn-add-produk {
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+        }
+
+        .btn-edit {
+            background: white;
+            border: 2px solid #E30000;
+            color: #E30000;
+            border-radius: 999px;
+            padding: 6px 20px;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .btn-delete {
+            background: #E30000;
+            color: white;
+            border-radius: 999px;
+            padding: 8px 20px;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .edit-price {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .edit-detail-card {
+            padding: 26px 24px 28px;
+        }
+
+        .detail-title-red {
+            color: #E30000;
+        }
+
+        .edit-detail-label {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .edit-detail-value {
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        .btn-add-produk {
+            width: 100%;
+            background: #E30000;
+            color: white;
+            border-radius: 999px;
+            padding: 12px 16px;
+            font-size: 18px;
         }

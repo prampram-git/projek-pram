@@ -1,4 +1,6 @@
-@extends('layouts.authr')
+@extends('layouts.appa')
+
+@section('title', 'Registrasi Petugas Berhasil')
 
 @section('content')
 
@@ -14,7 +16,7 @@
 
             <h2>Registrasi akun petugas berhasil!</h2>
 
-            <a href="{{ route('registera.form') }}" class="success-btn">
+            <a href="{{ route('laporanproduka') }}" class="success-btn">
                 Kembali
             </a>
 

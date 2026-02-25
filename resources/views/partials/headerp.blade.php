@@ -8,7 +8,7 @@
             <span class="divider">|</span>
 
             <div class="petugas-menu">
-                <a href="#">Laporan Produk</a>
+                <a href="{{ route('laporanprodukp') }}" class="{{ request()->routeIs('laporanprodukp') ? 'active' : '' }}">Laporan Produk</a>
                 <a href="#">Edit Produk</a>
                 <a href="#">Konfirmasi Pesanan</a>
                 <a href="#">Riwayat Transaksi</a>

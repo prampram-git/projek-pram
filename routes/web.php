@@ -33,8 +33,10 @@ Route::get('/register-success', function () {
     return view('auth.registersuccess');
 })->name('register.success');
 
-Route::get('/register-successa', function () {
-    return view('auth.registersuccessa');
-})->name('registera.success');
+Route::get('/register-successa', [AuthController::class, 'showRegisterPetugasSuccess'])->name('registera.success');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/admin/edit-produk', function () {
+    return view('admin.editproduka');
+})->name('editproduka');

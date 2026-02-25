@@ -24,7 +24,8 @@ use Illuminate\Support\Facades\Hash;
          ]);
  
           User::create([
-             'nama_pengguna' => $validated['nama_pengguna'],
+             'nama_pengguna' => fake()->name(),
+            'no_telepon' => fake()->unique()->numerify('08##########'),
              'no_telepon' => $validated['no_telepon'],
              'email' => $validated['email'],
              'password' => Hash::make($validated['password']),
@@ -76,6 +77,15 @@ use Illuminate\Support\Facades\Hash;
          }
 
          return view('auth.registera');
+     }
+
+      public function showRegisterPetugasSuccess()
+     {
+         if (!Auth::check() || Auth::user()->role !== 'admin') {
+             return redirect()->route('login');
+         }
+
+         return view('auth.registersuccessa');
      }
 
      public function registerPetugas(Request $request)
