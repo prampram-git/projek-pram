@@ -66,6 +66,12 @@
                 color: #FF0000;
             }
 
+            .petugas-menu a.active {
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                text-decoration-thickness: 2px;
+            }
+
             /* Profile Circle */
             .profile-circle {
                 width: 35px;

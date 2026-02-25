@@ -8,11 +8,11 @@
             <span class="divider">|</span>
 
             <div class="admin-menu">
-                <a href="#">Laporan Produk</a>
+                <a href="{{ route('laporanproduka') }}" class="{{ request()->routeIs('laporanproduka') ? 'active' : '' }}">Laporan Produk</a>
                 <a href="#">Edit Produk</a>
                 <a href="#">Riwayat Transaksi</a>
                 <a href="#">Backup / Restore</a>
-                <a href="#">Registrasi Petugas</a>
+                <a href="{{ route('registera.form') }}" class="{{ request()->routeIs('registera.form', 'registera.success') ? 'active' : '' }}">Registrasi Petugas</a>
 
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle">

@@ -50,14 +50,59 @@ use Illuminate\Support\Facades\Hash;
  
          if (Auth::attempt($credentials)) {
              $request->session()->regenerate();
-             return redirect()->route('home.login');
+             
+             $role = Auth::user()->role;
+
+             if ($role === 'admin') {
+                 return redirect()->route('laporanproduka');
+             }
+
+             if ($role === 'petugas') {
+                 return redirect()->route('laporanprodukp');
+             }
+
+             return redirect()->route('homel');
          }
  
          return back()->withErrors([
              'email' => 'Email atau password salah.',
          ]);
      }
- 
+     
+     public function showRegisterPetugas()
+     {
+         if (!Auth::check() || Auth::user()->role !== 'admin') {
+             return redirect()->route('login');
+         }
+
+         return view('auth.registera');
+     }
+
+     public function registerPetugas(Request $request)
+     {
+         if (!Auth::check() || Auth::user()->role !== 'admin') {
+             return redirect()->route('login');
+         }
+
+         $validated = $request->validate([
+             'nama_pengguna' => 'required|string|max:255',
+             'no_telepon' => 'required|string|unique:users,no_telepon',
+             'email' => 'required|email|unique:users,email',
+             'password' => 'required|min:6',
+         ]);
+
+         User::create([
+             'nama_pengguna' => $validated['nama_pengguna'],
+             'no_telepon' => $validated['no_telepon'],
+             'email' => $validated['email'],
+             'password' => Hash::make($validated['password']),
+             'role' => 'petugas',
+         ]);
+
+         return redirect()->route('registera.success')
+             ->with('success', 'Registrasi petugas berhasil!');
+     }
+     
      public function logout(Request $request)
      {
          Auth::logout();

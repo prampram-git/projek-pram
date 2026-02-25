@@ -20,13 +20,13 @@
             <div class="form-bottom">
                 <p class="login-link">
                     Belum punya akun?
-                    <a href="{{ route('register') }}">Register</a>
+                    <a href="{{ route('register.form') }}">Register</a>
                 </p>
 
                 <button type="submit">Login</button>
             </div>
         </form>
-        
+
         </div>
     </div>
 </div>
