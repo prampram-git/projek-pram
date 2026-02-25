@@ -1,125 +1,96 @@
-</div>@extends('layouts.appa')
+@extends('layouts.appa')
+ 
+@section('title', 'Edit Produk Admin')
+ 
+ @section('content')
+ <div class="admin-container">
+    <h2 class="page-title">Edit Produk</h2>
+ 
+    <div class="laporan-layout edit-layout">
+         <div class="produk-list">
+             <div class="produk-card edit-card">
+                 <div class="produk-image product-thumb thumb-grey"></div>
 
-@section('title', 'Laporan Produk Admin')
+                 <div class="produk-info edit-info">
+                     <h3 class="produk-title">Infinix Note 50 8/256GB - Up to 16GB Extended RAM - Helio G100 - 6.78” FHD+ Amoled - 50MP OIS - 5200 mAh - NFC - Titanium Grey</h3>
+                     <p class="produk-subtitle">Titanium Grey 8/256GB</p>
+                     <p class="stok-text">Stok 8</p>
 
-@section('content')
-<div class="admin-container">
-
-    <h2 class="page-title">Laporan Produk</h2>
-
-    <div class="laporan-layout">
-
-        <!-- LEFT: LIST PRODUK -->
-        <div class="produk-list">
-
-            <!-- CARD PRODUK 1 -->
-            <div class="produk-card">
-                <div class="produk-image">
-                    <div class="img-dummy"></div>
-                </div>
-
-                <div class="produk-info">
-                    <h3 class="produk-title">
-                        Nama Produk Dummy 1
-                    </h3>
-
-                    <p class="produk-subtitle">
-                        Varian / Keterangan Produk
-                    </p>
-
-                    <div class="divider-line"></div>
-
-                    <div class="ringkasan">
-                        <p class="label">Ringkasan Transaksi:</p>
-
-                        <div class="row">
-                            <span>Harga produk</span>
-                            <span>Rp0</span>
-                        </div>
-                        <div class="row">
-                            <span>Produk terjual</span>
-                            <span>0</span>
-                        </div>
-                        <div class="row">
-                            <span>Stok produk</span>
-                            <span>0</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CARD PRODUK 2 -->
-            <div class="produk-card">
-                <div class="produk-image">
-                    <div class="img-dummy"></div>
-                </div>
-
-                <div class="produk-info">
-                    <h3 class="produk-title">
-                        Nama Produk Dummy 2
-                    </h3>
-
-                    <p class="produk-subtitle">
-                        Varian / Keterangan Produk
-                    </p>
-
-                    <div class="divider-line"></div>
-
-                    <div class="ringkasan">
-                        <p class="label">Ringkasan Transaksi:</p>
-
-                        <div class="row">
-                            <span>Harga produk</span>
-                            <span>Rp0</span>
-                        </div>
-                        <div class="row">
-                            <span>Produk terjual</span>
-                            <span>0</span>
-                        </div>
-                        <div class="row">
-                            <span>Stok produk</span>
-                            <span>0</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- RIGHT: DETAIL PRODUK -->
-        <div class="detail-card">
-            <h3 class="detail-title">Detail Produk</h3>
-
-            <div class="detail-box">
-                <p class="detail-label">Jumlah Transaksi</p>
-                <p class="detail-value">0</p>
-            </div>
-
-            <div class="detail-box">
-                <p class="detail-label">Jumlah Pendapatan</p>
-                <p class="detail-value">Rp0</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-@endsection<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Mindys')</title>
-
-    <link rel="stylesheet" href="{{ asset('css/heada.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body> 
-
-    @include('partials.headera')
-
-    <main>
-        @yield('content')
-    </main>
-
-</body>
-</html>
+                     <div class="edit-actions-row">
+                         <div class="edit-buttons">
+                             <button type="button" class="btn-edit">Ubah</button>
+                             <button type="button" class="btn-delete">Hapus</button>
+                         </div>
+                         <p class="edit-price">Rp2.899.000</p>
+                     </div>
+                 </div>
+             </div>
+ 
+             <div class="produk-card edit-card">
+                 <div class="produk-image product-thumb thumb-black"></div>
+ 
+                 <div class="produk-info edit-info">
+                     <h3 class="produk-title">Infinix Note 50 8/256GB - Up to 16GB Extended RAM - Helio G100 - 6.78” FHD+ Amoled - 50MP OIS - 5200 mAh - NFC - Shadow Black</h3>
+                     <p class="produk-subtitle">Shadow Black 8/256GB</p>
+                     <p class="stok-text">Stok 8</p>
+ 
+                     <div class="edit-actions-row">
+                         <div class="edit-buttons">
+                             <button type="button" class="btn-edit">Ubah</button>
+                             <button type="button" class="btn-delete">Hapus</button>
+                         </div>
+                         <p class="edit-price">Rp2.899.000</p>
+                     </div>
+                 </div>
+             </div>
+ 
+             <div class="produk-card edit-card">
+                 <div class="produk-image product-thumb thumb-green"></div>
+ 
+                 <div class="produk-info edit-info">
+                     <h3 class="produk-title">Infinix Note 50 8/256GB - Up to 16GB Extended RAM - Helio G100 - 6.78” FHD+ Amoled - 50MP OIS - 5200 mAh - NFC - Mountain Shade</h3>
+                     <p class="produk-subtitle">Mountain Shade 8/256GB</p>
+                     <p class="stok-text">Stok 8</p>
+ 
+                     <div class="edit-actions-row">
+                         <div class="edit-buttons">
+                             <button type="button" class="btn-edit">Ubah</button>
+                             <button type="button" class="btn-delete">Hapus</button>
+                         </div>
+                         <p class="edit-price">Rp2.899.000</p>
+                     </div>
+                 </div>
+             </div>
+ 
+             <div class="produk-card edit-card">
+                 <div class="produk-image product-thumb thumb-red"></div>
+ 
+                 <div class="produk-info edit-info">
+                     <h3 class="produk-title">Infinix Note 50 8/256GB - Up to 16GB Extended RAM - Helio G100 - 6.78” FHD+ Amoled - 50MP OIS - 5200 mAh - NFC - Ruby Red</h3>
+                     <p class="produk-subtitle">Ruby Red 8/256GB</p>
+                     <p class="stok-text">Stok 8</p>
+ 
+                     <div class="edit-actions-row">
+                         <div class="edit-buttons">
+                             <button type="button" class="btn-edit">Ubah</button>
+                             <button type="button" class="btn-delete">Hapus</button>
+                         </div>
+                         <p class="edit-price">Rp2.899.000</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+ 
+         <aside class="detail-card edit-detail-card">
+             <h3 class="detail-title detail-title-red">Detail Produk</h3>
+ 
+             <div class="detail-box edit-detail-box">
+                 <p class="edit-detail-label">Jumlah Produk</p>
+                 <p class="edit-detail-value">4</p>
+             </div>
+ 
+             <button type="button" class="btn-add-produk">Tambah Produk +</button>
+         </aside>
+     </div>
+ </div>
+@endsection

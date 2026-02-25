@@ -38,5 +38,5 @@ Route::get('/register-successa', [AuthController::class, 'showRegisterPetugasSuc
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/admin/edit-produk', function () {
-    return view('admin.editproduka');
+    return view('editproduka');
 })->name('editproduka');

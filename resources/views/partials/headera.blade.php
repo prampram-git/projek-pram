@@ -9,7 +9,7 @@
 
             <div class="admin-menu">
                 <a href="{{ route('laporanproduka') }}" class="{{ request()->routeIs('laporanproduka') ? 'active' : '' }}">Laporan Produk</a>
-                <a href="#">Edit Produk</a>
+                <a href="{{ route('editproduka') }}" class="{{ request()->routeIs('editproduka') ? 'active' : '' }}">Edit Produk</a>
                 <a href="#">Riwayat Transaksi</a>
                 <a href="#">Backup / Restore</a>
                 <a href="{{ route('registera.form') }}" class="{{ request()->routeIs('registera.form', 'registera.success') ? 'active' : '' }}">Registrasi Petugas</a>
